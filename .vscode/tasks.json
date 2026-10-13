@@ -1,0 +1,44 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build PDG converter (GCC)",
+            "type": "process",
+            "command": "gcc",
+            "args": [
+                "-std=c11",
+                "-O3",
+                "-g",
+                "-municode",
+                "pdg_converter.c",
+                "-lole32",
+                "-loleaut32",
+                "-lwindowscodecs",
+                "-lbcrypt",
+                "-luuid",
+                "-o",
+                "pdg_converter.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Run PDG converter",
+            "type": "process",
+            "command": "${workspaceFolder}/pdg_converter.exe",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "dependsOn": "Build PDG converter (GCC)",
+            "problemMatcher": []
+        }
+    ]
+}

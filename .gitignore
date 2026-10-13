@@ -1,0 +1,37 @@
+# User input and generated images / reports
+/input/*
+!/input/.gitkeep
+/converted_images/
+*.pdg
+conversion_report_*.csv
+conversion_report_*.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Native builds
+/build/
+/cmake-build-*/
+.zig-cache/
+zig-out/
+*.exe
+*.dll
+*.pdb
+*.ilk
+*.o
+*.obj
+*.lib
+*.a
+
+# Local editor and backup files
+.idea/
+*.bak
+*.bak.*
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
