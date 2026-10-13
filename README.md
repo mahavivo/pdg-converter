@@ -1,5 +1,7 @@
 # PDG Converter
 
+`**本项目的代码和文本主要由 GPT-6.1-Sol 生成、输出。**`
+
 将 PDG 文件批量转换或提取为 PNG、JPEG、TIFF 等图像文件，提供 Python 和 Windows 原生 C 两种实现。程序识别 PDG 内部的实际图像格式；黑白传真页默认输出 PNG，已经包含标准图像的文件默认保留原始格式和压缩数据。
 
 项目根据 Pdg2Pic 3.06 的静态分析、核心函数隔离仿真与配对样本核对实现，无需安装或运行 Pdg2Pic、SsReader、Ghidra。算法和证据范围见 [Pdg2Pic_实现分析.md](Pdg2Pic_实现分析.md)。
